@@ -25,3 +25,10 @@
 .line{
     background-color: black;
 }
+.loadBtn{
+    background-color: green;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+}
