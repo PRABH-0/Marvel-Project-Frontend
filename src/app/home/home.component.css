@@ -1,5 +1,5 @@
 .backBody{
-    background-color: rgb(204, 204, 196);
+    background-color: beige;
     height: 90vh;
     width: 100vw;
     display: flex;
@@ -12,6 +12,8 @@
     border: 1px solid gray;
     border-radius: 10px;
     height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
     width: 50vw;
     margin: 20px;
     background-color: aquamarine;
@@ -21,4 +23,14 @@
     height: auto;
     margin-left: 20px;
     margin-top: 40px;
+}
+.line{
+    background-color: black;
+}
+.loadBtn{
+    background-color: green;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
 }
