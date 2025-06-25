@@ -1,5 +1,5 @@
 .backBody{
-    background-color: beige;
+    background-color: rgb(206, 206, 200);
     height: 90vh;
     width: 100vw;
     display: flex;
@@ -10,6 +10,8 @@
 }
 .tableDiv{
     height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
     width: 50vw;
     margin: 20px;
     background-color: aquamarine;
@@ -19,4 +21,7 @@
     height: auto;
     margin-left: 20px;
     margin-top: 40px;
+}
+.line{
+    background-color: black;
 }
