@@ -1,0 +1,80 @@
+<h3>All-Build-API--</h3>
+
+
+<div class="backBody">
+    <div class="btnDiv">
+        <button (click)="LoadData()">LoadData</button>
+        <button (click)="Visible()">AddMovie</button>
+    </div>
+    <div class="tableDiv">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Movie-Hero</th>
+                <th scope="col">Release date</th>
+                <th scope="col">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let d of data">
+                      <th scope="row">{{d.id}}</th>
+                      <td>{{d.name}}</td>
+                      <td>{{d.movieHero}}</td>
+                      <td>{{d.releaseDate}}</td>
+                      <td>{{d.rating}}</td>
+                      <td><button (click)="editMovie(d.id)">Edit</button></td>
+                      <td><button (click)="deleteMovie(d.id)">delete</button></td>
+                    </tr>
+            </tbody>
+          </table>
+    </div>
+    <div *ngIf="formVisible==true" class="movieForm">
+        <h3>Update Movie Id--{{UpdateId}}</h3>
+        <form #userForm="ngForm" (ngSubmit)="updateMovie(userForm)">
+            <div class="form-group">
+                <label>Movie Name</label>
+                <input type="text" class="form-control" name="movieName" [(ngModel)]="movie.Name" placeholder="Enter Movie Name" required>
+            </div>
+            <div class="form-group">
+                <label>Movie Hero</label>
+                <input type="text" class="form-control" name="movieHero" [(ngModel)]="movie.movieHero" placeholder="Enter Movie Hero" required>
+            </div>
+            <div class="form-group">
+                <label>Release Date</label>
+                <input type="text" class="form-control" name="releaseDate" [(ngModel)]="movie.releaseDate" placeholder="Enter Release Date" required>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <input type="text" class="form-control" name="rating" [(ngModel)]="movie.rating" placeholder="Enter Rating" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+    </div>
+    <!-- Add Movie Form -->
+    <div *ngIf="addformVisible==true" class="movieForm">
+        <h3>Add Movie</h3>
+        <form #userForm="ngForm" (ngSubmit)="addMovie()">
+            <div class="form-group">
+                <label>Movie Name</label>
+                <input type="text" class="form-control" name="movieName" [(ngModel)]="movie.Name" placeholder="Enter Movie Name" required>
+            </div>
+            <div class="form-group">
+                <label>Movie Hero</label>
+                <input type="text" class="form-control" name="movieHero" [(ngModel)]="movie.movieHero" placeholder="Enter Movie Hero" required>
+            </div>
+            <div class="form-group">
+                <label>Release Date</label>
+                <input type="text" class="form-control" name="releaseDate" [(ngModel)]="movie.releaseDate" placeholder="Enter Release Date" required>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <input type="text" class="form-control" name="rating" [(ngModel)]="movie.rating" placeholder="Enter Rating" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
+    </div>
+</div>

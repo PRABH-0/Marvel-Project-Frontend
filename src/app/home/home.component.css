@@ -1,0 +1,22 @@
+.backBody{
+    background-color: beige;
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    /* place-items: center;
+    text-align: center;
+     align-items: center; 
+    justify-content: center; */
+}
+.tableDiv{
+    height: auto;
+    width: 50vw;
+    margin: 20px;
+    background-color: aquamarine;
+   
+}
+.movieForm{
+    height: auto;
+    margin-left: 20px;
+    margin-top: 40px;
+}
